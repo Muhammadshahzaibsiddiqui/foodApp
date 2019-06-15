@@ -2,7 +2,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## How to Install
 first clone it
+
 then run command npm install to install all dependencies
+
 then run the App
 
 ## Available Scripts
