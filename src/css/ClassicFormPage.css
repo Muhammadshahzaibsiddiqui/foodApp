@@ -1,0 +1,87 @@
+#classicformpage .view {
+    /* background-image: url('https://mdbootstrap.com/img/Photos/Others/images/91.jpg'); */
+    background-image: url('../images/bg1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+  }
+  
+  #classicformpage .gradient {
+    background: -webkit-linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(72, 15, 144, 0.4) 100%);
+    background: -webkit-gradient(linear, 45deg, from(rgba(0, 0, 0, 0.7), rgba(72, 15, 144, 0.4) 100%));
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(72, 15, 144, 0.4) 100%);
+  }
+  
+  #classicformpage .card {
+    background-color: rgba(126, 123, 215, 0.2);
+  }
+  
+  #classicformpage h6 {
+    line-height: 1.7;
+  }
+  
+  #classicformpage .navbar {
+    transition: background .5s ease-in-out,padding .5s ease-in-out;
+    background-color: #d31e44;
+    /* background-color: black; */
+  }
+  
+  #classicformpage .top-nav-collapse {
+    background: #424f95 !important;
+  }
+  
+  @media (max-width: 768px) {
+    #classicformpage .navbar:not(.top-nav-collapse) {
+        /* background: #424f95 !important; */
+    background-color: #d31e44;
+
+        
+    }
+   
+  }
+  
+  #classicformpage label {
+    /* color: #fff!important; */
+  }
+  .SimpleTabs-root-1{
+    /* margin-top: 4%; */
+  }
+  span{
+    color: black;
+  }
+ 
+.blue{
+ background-color: #d31e44 !important;
+ color: black !important;
+}
+
+.d-flex {
+  width: 100%;
+}
+.MuiFormLabel-root{
+  /* color:red !important; */
+}
+.MuiFormControl-root{
+  width: 100%;
+}
+.btn{
+  height: 56px !important;
+}
+.MuiTypography-body1{
+  /* padding: 0px !important; */
+}
+.navbar-toggler{
+  display: none;
+}
+.form-control{
+  color:white !important;
+}
+#carasoul img{
+  height: 600px;
+}
+@media only screen and (max-width: 1024px) {
+  #carasoul img{
+    height: 5% !important ;
+  }
+}
