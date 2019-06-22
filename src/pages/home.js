@@ -9,9 +9,12 @@ import Search from '../components/user/searchField';
 import Gallery from '../components/gallery';
 import Slider from '../components/slider'
 import DealSlider from '../components/dealSlider'
+import RecentPost from '../components/recentPost';
+import HomeSection from '../components/homeSection';
 import slide1 from '../images/slide1.png';
 import slide2 from '../images/slide2.png';
 import slide3 from '../images/slide3.png';
+
 
 class home extends React.Component {
     state = {
@@ -82,10 +85,13 @@ class home extends React.Component {
                 </div>
                 <script src='https://material-ui.com/components/grid-list/#SingleLineGridList.js'></script>
 
-
                 <Search />
                 <SingleLineGridList />
                 <Gallery />
+                <div id='recentPost'> 
+                <RecentPost/>
+                </div>
+                {/* <HomeSection/> */}
                 {/* <DealSlider/> */}
                 {/* <Slider /> */}
                 <Footer />

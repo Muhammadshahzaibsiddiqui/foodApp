@@ -5,6 +5,8 @@ import {
     MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBMask, MDBRow, MDBCol, MDBIcon,
     MDBBtn, MDBView, MDBContainer, MDBCard, MDBCardBody, MDBInput, MDBFormInline
 } from "mdbreact";
+import SpeedDial from '../components/speedDial';
+
 import logo from '../images/logo4.png';
 import "../css/ClassicFormPage.css";
 
@@ -42,15 +44,17 @@ class Nav extends React.Component {
                                     navbar
                                 >
                                 </MDBCollapse>
-                                   
-                                    <MDBNavbarNav center>
-                                        <MDBNavItem active>
-                                            <MDBNavbarBrand>
-                                                <img src={logo} height='60'/>
-                                            </MDBNavbarBrand>
-                                        </MDBNavItem>
-                                    </MDBNavbarNav>
-                          
+
+                                {/* <SpeedDial /> */}
+
+                                <MDBNavbarNav center>
+                                    <MDBNavItem active>
+                                        <MDBNavbarBrand>
+                                            <img src={logo} height='60' />
+                                        </MDBNavbarBrand>
+                                    </MDBNavItem>
+                                </MDBNavbarNav>
+
                             </MDBContainer>
                         </MDBNavbar>
                     </div>

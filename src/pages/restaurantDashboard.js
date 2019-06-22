@@ -4,7 +4,7 @@ import '../css/ClassicFormPage.css'
 import Nav from '../components/nav'
 import Tabs from '../components/restaurant/tabs';
 import Footer from '../components/footer';
-
+import { Chat } from 'react-chat-popup';
 
 class userDashboard extends React.Component {
   state = {
@@ -33,7 +33,9 @@ class userDashboard extends React.Component {
         </div>
         
         <Tabs />
-
+        <Chat handleNewUserMessage={this.handleNewUserMessage} profileAvatar={'logo'}
+                    title="My new awesome title"
+                    subtitle="And my cool subtitle" />
         <Footer />
       </div>
     );

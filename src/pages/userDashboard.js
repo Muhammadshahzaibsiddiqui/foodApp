@@ -5,12 +5,17 @@ import Nav from '../components/nav'
 import Tabs from '../components/user/tabs';
 import Footer from '../components/footer';
 
-
 class userDashboard extends React.Component {
   state = {
     collapseID: ""
   };
-
+  // componentDidMount() {
+  //   addResponseMessage("Welcome to this awesome chat!");
+  // }
+  handleNewUserMessage = (newMessage) => {
+    console.log(`New message incomig! ${newMessage}`);
+    // Now send the message throught the backend API
+  }
   toggleCollapse = collapseID => () =>
     this.setState(prevState => ({
       collapseID: prevState.collapseID !== collapseID ? collapseID : ""
@@ -31,7 +36,7 @@ class userDashboard extends React.Component {
         <div>
           <Nav />
         </div>
-
+       
         <Tabs />
         <Footer />
       </div>

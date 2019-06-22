@@ -5,6 +5,7 @@
     background-size: cover;
     background-position: center center;
     height: 100vh;
+    margin-top: 5.4%;
   }
   
   #classicformpage .gradient {
@@ -80,8 +81,66 @@
 #carasoul img{
   height: 600px;
 }
+.SpeedDials-root-1{
+  position: absolute;
+    top: 103%;
+    left: 0%;
+}
+.SpeedDials-exampleWrapper-3 {
+  height:0px !important;
+}
+#recentPost .card{
+  box-shadow: none;
+}
+#accordion .card {
+  background-color: rgba(255, 255, 255, 0);
+  box-shadow: none;
+}
+#accordion .z-depth-1-half {
+  box-shadow: none !important;
+}
+.celled{
+  box-shadow: 0px 3px 8px 3px rgba(0,0,0,0.1) !important;
+  background-color: rgba(211,30,68,0.03);
+  /* box-shadow: 0px 3px 8px 3px rgba(211,30,68,0.2) !important; */
+}
+.justifyContent{
+  display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+#coverPhoto img{
+  height: 40em;
+}
+#navigator{
+  padding:1% 0;
+  width: 100%;
+  position: absolute;;
+  z-index: 1001;
+  top: 13%;
+  background-color: #d31e44
+}
+#navigator li{
+  list-style: none;
+  padding: 1%;
+  display: inline;
+}
+#navigator li a{
+  color: white !important;
+}
+#navigator li a:hover{
+  color: black !important;
+  font-size: 101%;
+  font-weight: bolder;
+}
+.MuiPaper-root{
+  margin-top: 5.5% !important;
+}
 @media only screen and (max-width: 1024px) {
   #carasoul img{
     height: 5% !important ;
+  }
+  #coverPhoto img{
+    height: 100% !important;
   }
 }

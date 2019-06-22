@@ -53,20 +53,25 @@ class SimpleTabs extends React.Component {
 
                 {value === 0 && <TabContainer padding={0}>
                     {/* <img src={bg} width='100%'/> */}
-                    <FoodList/>
 
+                    <FoodList progress ='Progress' url='https://www.aprettylifeinthesuburbs.com/wp-content/uploads/2018/06/Sweet-Sticky-BBQ-Turkey-Legs-7.jpg' title='Sweet & Sticky BBQ Turkey Legs' />
+                    <FoodList progress ='Progress' url='https://blog.cedars-sinai.edu/wp-content/uploads/2018/07/does-grilled-food-cause-cancer.jpg' title='Grill' />
+                    <FoodList progress ='Progress' url='https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/quizzes/grill_skills_rmq/650x350_grill_skills_rmq.jpg' title='Zacks BBQ Sauce & Basting Stock!' />
                 </TabContainer>}
 
                 {value === 1 && <TabContainer padding={0}>
-                <FoodList/>
+
+                    <FoodList progress ='Delivery' url='https://www.aprettylifeinthesuburbs.com/wp-content/uploads/2018/06/Sweet-Sticky-BBQ-Turkey-Legs-7.jpg' title='Sweet & Sticky BBQ Turkey Legs' />
+                    <FoodList progress ='Delivery' url='https://blog.cedars-sinai.edu/wp-content/uploads/2018/07/does-grilled-food-cause-cancer.jpg' title='Grill' />
+                    <FoodList progress ='Delivery' url='https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/quizzes/grill_skills_rmq/650x350_grill_skills_rmq.jpg' title='Zacks BBQ Sauce & Basting Stock!' />
 
 
                 </TabContainer>}
 
                 {value === 2 && <TabContainer padding={0}>
-
-                <FoodList/>
-
+                    <FoodList progress ='Delivered' url='https://www.aprettylifeinthesuburbs.com/wp-content/uploads/2018/06/Sweet-Sticky-BBQ-Turkey-Legs-7.jpg' title='Sweet & Sticky BBQ Turkey Legs' />
+                    <FoodList progress ='Delivered' url='https://blog.cedars-sinai.edu/wp-content/uploads/2018/07/does-grilled-food-cause-cancer.jpg' title='Grill' />
+                    <FoodList progress ='Delivered' url='https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/quizzes/grill_skills_rmq/650x350_grill_skills_rmq.jpg' title='Zacks BBQ Sauce & Basting Stock!' />
                 </TabContainer>}
 
             </div>

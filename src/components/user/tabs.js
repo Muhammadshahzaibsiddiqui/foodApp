@@ -10,6 +10,8 @@ import NestedTabs from './nestedTabs';
 import Search from './searchField';
 import Chips from './chips';
 import FoodList from './foodList';
+import Accordion from '../accordion';
+
 
 
 function TabContainer(props) {
@@ -55,12 +57,14 @@ class SimpleTabs extends React.Component {
                 </AppBar>
 
                 {value === 0 && <TabContainer padding={3}>
-
+                    <div id='accordion'>
+                        <Accordion />
+                    </div>
                     <Search />
                     <Chips />
-                    <FoodList/>
-                    <FoodList/>
-                    <FoodList/>
+                    <FoodList url='https://www.aprettylifeinthesuburbs.com/wp-content/uploads/2018/06/Sweet-Sticky-BBQ-Turkey-Legs-7.jpg' title='Sweet & Sticky BBQ Turkey Legs' />
+                    <FoodList url='https://blog.cedars-sinai.edu/wp-content/uploads/2018/07/does-grilled-food-cause-cancer.jpg' title='Grill'/>
+                    <FoodList url='https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/quizzes/grill_skills_rmq/650x350_grill_skills_rmq.jpg' title='Zacks BBQ Sauce & Basting Stock!'/>
 
 
 

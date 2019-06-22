@@ -6,6 +6,8 @@ import Registration from './pages/registration';
 import UserDashboard from './pages/userDashboard';
 import RestaurantDashboard from './pages/restaurantDashboard';
 import Home from './pages/home';
+import Food from './pages/individualFood';
+import Navigator from './components/navigator'
 class App extends Component {
   render() {
     return (
@@ -14,7 +16,9 @@ class App extends Component {
         {/* <Registration/> */}
         {/* <UserDashboard /> */}
         {/* <RestaurantDashboard/> */}
-        <Home/>
+        <Navigator/>
+        {/* <Food/> */}
+        {/* <Home/> */}
       </div>
     );
   }
