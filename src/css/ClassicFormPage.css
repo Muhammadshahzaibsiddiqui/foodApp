@@ -12,6 +12,7 @@
     background: -webkit-linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(72, 15, 144, 0.4) 100%);
     background: -webkit-gradient(linear, 45deg, from(rgba(0, 0, 0, 0.7), rgba(72, 15, 144, 0.4) 100%));
     background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(72, 15, 144, 0.4) 100%);
+    padding-top:6%;
   }
   
   #classicformpage .card {
@@ -136,6 +137,20 @@
 .MuiPaper-root{
   margin-top: 5.5% !important;
 }
+
+#postAccordion .card {
+  background-color: rgba(255, 255, 255, 0) !important;
+  box-shadow: none !important;
+}
+#postAccordion input {
+  color: black !important;
+}
+#postAccordion .z-depth-1-half {
+  box-shadow: none !important;
+}
+
+
+
 @media only screen and (max-width: 1024px) {
   #carasoul img{
     height: 5% !important ;

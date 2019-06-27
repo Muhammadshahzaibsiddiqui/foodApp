@@ -4,11 +4,10 @@ import React from 'react'
 class FoodList extends React.Component{
   
   render(){
-    console.log(this.props);
   return(
   <div class="ui celled grid">
   <div class="row">
-    <div class="sixteen wide column">
+    <div class="five wide column">
       <img src={this.props.url} class="ui image" />
       <button>Order Now</button>
     </div>

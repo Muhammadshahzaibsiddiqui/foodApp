@@ -47,7 +47,14 @@ class individualFood extends React.Component {
                 onClick={this.toggleCollapse("navbarCollapse")}
             />
         );
+        // console.log(this.props.location.food.name);
+        // console.log(this.props.location.food.price);
+        // console.log(this.props.location.food.img_URL);
 
+            const name =this.props.location.food.name
+            const price =this.props.location.food.price
+            const url =this.props.location.food.img_URL
+            
         return (
             <div id="classicformpage">
                 <div>
@@ -62,7 +69,7 @@ class individualFood extends React.Component {
                 <Chat handleNewUserMessage={this.handleNewUserMessage} profileAvatar={'logo'}
                     title="My new awesome title"
                     subtitle="And my cool subtitle" />
-                <IndividualFoodList url='https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=1&w=500' title='Chicken Roll' />
+                <IndividualFoodList url={url} title={name} />
                 <Comment/>
                 <Footer />
             </div>

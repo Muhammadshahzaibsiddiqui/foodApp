@@ -19,7 +19,7 @@ export default function Navigator() {
                 <li><Link to='/login'>Login</Link></li>
                 <li><Link to='/userDashboard'>User</Link></li>
                 <li><Link to='/restaurantDashboard'>Restaurant</Link></li>
-                <li><Link to='/individualFood'>Food Page</Link></li>
+                {/* <li><Link to='/individualFood'>Food Page</Link></li> */}
             </ul>
             <div>
                 <Route exact path='/' component={Home} />

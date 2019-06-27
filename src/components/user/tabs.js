@@ -11,6 +11,8 @@ import Search from './searchField';
 import Chips from './chips';
 import FoodList from './foodList';
 import Accordion from '../accordion';
+import { userFoodList } from '../../config/firebase'
+
 
 
 
@@ -36,15 +38,33 @@ const styles = theme => ({
 class SimpleTabs extends React.Component {
     state = {
         value: 0,
+        list:[]
     };
 
     handleChange = (event, value) => {
         this.setState({ value });
     };
 
+    componentDidMount() {
+        this.show();
+    }
+
+    async show() {
+        try {
+            const result = await userFoodList();
+            console.log("Result", result);
+            // console.log(result1);
+            this.setState({
+                list: result
+            })
+        } catch (e) {
+            console.log(e)
+        }
+    }
+
     render() {
         const { classes } = this.props;
-        const { value } = this.state;
+        const { value,list } = this.state;
 
         return (
             <div className={classes.root}>
@@ -62,9 +82,16 @@ class SimpleTabs extends React.Component {
                     </div>
                     <Search />
                     <Chips />
+                    <div>
+                        {
+                            list.map((item) => {
+                                return (<FoodList foodRef={item} price={item.price} title={item.name} url={item.img_URL} description={item.description} />)
+                            })
+                        }
+                    </div>
                     <FoodList url='https://www.aprettylifeinthesuburbs.com/wp-content/uploads/2018/06/Sweet-Sticky-BBQ-Turkey-Legs-7.jpg' title='Sweet & Sticky BBQ Turkey Legs' />
-                    <FoodList url='https://blog.cedars-sinai.edu/wp-content/uploads/2018/07/does-grilled-food-cause-cancer.jpg' title='Grill'/>
-                    <FoodList url='https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/quizzes/grill_skills_rmq/650x350_grill_skills_rmq.jpg' title='Zacks BBQ Sauce & Basting Stock!'/>
+                    <FoodList url='https://blog.cedars-sinai.edu/wp-content/uploads/2018/07/does-grilled-food-cause-cancer.jpg' title='Grill' />
+                    <FoodList url='https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/quizzes/grill_skills_rmq/650x350_grill_skills_rmq.jpg' title='Zacks BBQ Sauce & Basting Stock!' />
 
 
 

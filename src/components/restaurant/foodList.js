@@ -1,6 +1,7 @@
 import React from 'react'
 // import { Grid, Image } from 'semantic-ui-react'
 import Chip from '@material-ui/core/Chip';
+import { BrowserRouter as Router, Link } from "react-router-dom";
 
 
 class FoodList extends React.Component {
@@ -17,11 +18,15 @@ class FoodList extends React.Component {
           </div>
           <div class="ten wide column">
             <blockquote className="blockquote bq-primary">
-              <h2>BBQ Restaurant</h2>
-              <strong className="bq-title">{this.props.title}</strong>
+              
+                <h2><Link to={{
+                pathname:'/individualFood',
+                food: this.props.foodRef,
+              }}>{this.props.title}</Link></h2>
+              <strong className="bq-title">{this.props.description}</strong>
               <br />
               <br />
-              <b>Rs: 100/-</b>
+              <b>Rs:{this.props.price}/-</b>
             </blockquote>
           </div>
           <div class="three wide column justifyContent">
