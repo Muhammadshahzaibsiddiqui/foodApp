@@ -85,7 +85,7 @@ class SimpleTabs extends React.Component {
                     <div>
                         {
                             list.map((item) => {
-                                return (<FoodList foodRef={item} price={item.price} title={item.name} url={item.img_URL} description={item.description} />)
+                                return (<FoodList food_id={item.food_id._key.path.segments[6]} restaurant_id={item.restaurant_id} foodRef={item} price={item.price} title={item.name} url={item.img_URL} description={item.description} />)
                             })
                         }
                     </div>

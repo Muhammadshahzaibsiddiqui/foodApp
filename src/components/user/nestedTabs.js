@@ -7,7 +7,7 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import "../../css/ClassicFormPage.css";
 import FoodList from './requestFoodList';
-
+import { userRequests } from '../../config/firebase'
 
 
 function TabContainer(props) {
@@ -32,16 +32,34 @@ const styles = theme => ({
 class SimpleTabs extends React.Component {
     state = {
         value: 0,
+        req:[]
     };
 
     handleChange = (event, value) => {
         this.setState({ value });
     };
 
+    componentDidMount() {
+        this.show();
+    }
+
+    
+    async show() {
+        try {
+            const res_city = await userRequests();
+            // console.log(res_city);
+           this.setState({
+               req:res_city
+           })
+    
+        } catch (e) {
+            console.log("error===>", e);
+        }
+    }
+
     render() {
         const { classes } = this.props;
         const { value } = this.state;
-
         return (
             <div className={classes.root}>
 
@@ -54,8 +72,15 @@ class SimpleTabs extends React.Component {
                 </AppBar>
 
                 {value === 0 && <TabContainer padding={0}>
+                   }
                     {/* <img src={bg} width='100%'/> */}
-                    <FoodList class='spinner-border text-info' progress ='Progress' url='https://www.aprettylifeinthesuburbs.com/wp-content/uploads/2018/06/Sweet-Sticky-BBQ-Turkey-Legs-7.jpg' title='Sweet & Sticky BBQ Turkey Legs' />
+                   {this.state.req.map((item)=>{
+                    console.log(item);
+                    
+                      return(<FoodList class='spinner-border text-info' progress ='Progress' url='https://www.aprettylifeinthesuburbs.com/wp-content/uploads/2018/06/Sweet-Sticky-BBQ-Turkey-Legs-7.jpg' title='Sweet & Sticky BBQ Turkey Legs' />)
+
+                   })}
+                   
                     <FoodList class='spinner-border text-info' />
                     <FoodList class='spinner-border text-info'/>
 
